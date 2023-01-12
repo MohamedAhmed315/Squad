@@ -1,23 +1,43 @@
 @import './variables';
 
-.dark-mode {
-  background-color: $main-black;
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  a,
-  label {
-    color: $main-white;
+  &.light-mode {
+    background-color: #fff;
+    background-image: url(/src/img/hero-bg-light.jpg);
+
+
+    .nav-link {
+      &.active {
+        border: solid 1px transparent;
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
   }
 
-  .nav-link {
-    &.active {
-      color: $active-navlink;
+  &.dark-mode {
+    background-color: $main-black;
+    background-image: url(/src/img/hero-bg-dark.jpg);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    label {
+      color: $main-white;
+    }
+
+    .nav-link {
+      &.active {
+        color: $active-navlink;
+      }
     }
   }
 }
