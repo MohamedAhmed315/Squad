@@ -4,7 +4,6 @@
 @import 'animate.css';
 
 body {
-
   font-family: Raleway-Regular, sans-serif;
 
   #back-to-top {
@@ -35,7 +34,7 @@ body {
     left: 0;
 
     .navbar-brand {
-      font-family: Raleway-Bold;
+      font-family: Raleway-Bold, sans-serif;
       text-transform: uppercase;
     }
 
@@ -85,6 +84,7 @@ body {
               padding: 0.5rem 0;
               overflow: hidden;
               border-radius: 0;
+              width: fit-content;
 
               .dropdown-item {
                 padding-top: 0.5rem;
@@ -107,8 +107,14 @@ body {
     }
 
     .form-switch {
+      position: absolute;
+      right: 15px;
+
+      #dark-mode-switch {
+        width: 2.5em;
+      }
+
       @include media-breakpoint-down(lg) {
-        position: absolute;
         right: 77px;
         top: 16px;
       }
@@ -119,6 +125,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+    background-attachment: fixed;
     height: fit-content;
     min-height: 100vh;
     font-family: Raleway-Bold, sans-serif;
@@ -167,11 +174,85 @@ body {
     }
   }
 
+  #about-us {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Raleway-Bold, sans-serif;
+
+    .row {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      .icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .col-lg-5,
+      .col-lg-7 {
+        padding-right: 2rem;
+
+        p {
+          margin: 1rem auto;
+
+          @include media-breakpoint-down(lg) {
+            margin: 1.5rem auto;
+          }
+        }
+
+        #about-btn {
+          color: $main-white;
+          border-radius: 2rem;
+          border: solid 2px;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          margin: 1.5rem 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          width: 150px;
+
+          .fa-chevron-right {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
   // ---------------------------- Dark & Light mode -----------------------------------------
   &.light-mode {
+    background-color: $main-white;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    label,
+    .nav-link,
+    .nav-link.active {
+      color: $main-black;
+    }
+
     .hero {
       background-color: #fff;
       background-image: url(/src/img/hero-bg-light.jpg);
+    }
+
+    #dark-mode-switch {
+      background-image: url(https://www.svgrepo.com/show/490871/moon.svg);
     }
 
     #back-to-top {
@@ -187,24 +268,31 @@ body {
         color: $main-white;
       }
     }
+
+    #about-us {
+      background-image: url(/dist/img/aboutus-bg-light.jpg);
+
+      .row {
+
+        h1,
+        h3 {
+          color: $title-color-light;
+        }
+
+        .icon {
+          color: $nav-bg-light;
+        }
+
+        #about-btn {
+          background-color: $nav-bg-light;
+         border-color: $nav-bg-light;
+        }
+      }
+    }
   }
 
   &.dark-mode {
     background-color: $main-black;
-
-    .hero {
-      background-color: $main-black;
-      background-image: url(/src/img/hero-bg-dark.jpg);
-    }
-
-    #back-to-top {
-      background-color: $nav-bg-dark;
-      border: solid 1px $nav-bg-dark;
-    }
-
-    .nav-bg {
-      background-color: $nav-bg-dark;
-    }
 
     h1,
     h2,
@@ -220,6 +308,24 @@ body {
       color: $main-white;
     }
 
+    #dark-mode-switch {
+      background-image: url(https://www.svgrepo.com/show/486862/sun.svg);
+    }
+
+    .hero {
+      background-color: $main-black;
+      background-image: url(/src/img/hero-bg-dark.jpg);
+    }
+
+    #back-to-top {
+      background-color: $nav-bg-dark;
+      border: solid 1px $nav-bg-dark;
+    }
+
+    .nav-bg {
+      background-color: $nav-bg-dark;
+    }
+
     .navbar-toggler {
       background-color: #fff;
     }
@@ -230,6 +336,24 @@ body {
 
         .dropdown-divider {
           border-top-color: $main-white;
+        }
+      }
+    }
+
+    #about-us {
+      background-image: url(/dist/img/aboutus-bg-dark.jpg);
+      background-position: bottom;
+
+      .row {
+
+        h1,
+        h3,
+        .icon {
+          color: $main-white;
+        }
+
+        #about-btn {
+         border-color: $main-white;
         }
       }
     }

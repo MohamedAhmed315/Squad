@@ -35,6 +35,15 @@ window.onscroll = function () {
     scrollFunction();
 }
 
+// Close Navbar on Click
+document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("navbar-toggler-icon")) {
+        document.querySelector("#header").classList.toggle("show");
+    } else if (event.target.classList.contains("nav-link")) {
+        document.querySelector("#header").classList.remove("show");
+    }
+});
+
 // Back to Top
 let back_to_top = document.querySelector('#back-to-top');
 function scrollFunction() {
