@@ -1,5 +1,14 @@
 // jQuery
 import 'bootstrap';
 
-// Vendor scss
-import '../css/vendor.scss';
+// Fontawesome
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+// import '@fortawesome/fontawesome-free/js/regular';
+// import '@fortawesome/fontawesome-free/js/brands';
+
+// Animate.css
+import 'animate.css';
+
+// Wow.js
+import 'wowjs'
