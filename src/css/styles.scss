@@ -224,6 +224,10 @@ body {
             font-size: 12px;
           }
         }
+
+        .about-text {
+          font-family: Raleway-Regular, sans-serif;
+        }
       }
     }
   }
@@ -243,7 +247,11 @@ body {
     label,
     .nav-link,
     .nav-link.active {
-      color: $main-black;
+      color: $main-white;
+    }
+
+    .about-text {
+      color: $text-grey;
     }
 
     .hero {
@@ -285,7 +293,7 @@ body {
 
         #about-btn {
           background-color: $nav-bg-light;
-         border-color: $nav-bg-light;
+          border-color: $nav-bg-light;
         }
       }
     }
@@ -353,7 +361,7 @@ body {
         }
 
         #about-btn {
-         border-color: $main-white;
+          border-color: $main-white;
         }
       }
     }
