@@ -10,3 +10,4 @@
  - Fontawesome
  - Animate.css
  - Wow.js
+ - purecounterjs

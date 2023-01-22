@@ -1,4 +1,6 @@
 import '../css/styles.scss';
+import PureCounter from "@srexi/purecounterjs";
+
 
 // Dark Mode
 let dark_mode = document.querySelector('#dark-mode-switch');
@@ -56,4 +58,7 @@ function scrollFunction() {
 back_to_top.addEventListener('click', function () {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-}) 
+});
+
+// Counters
+const pure = new PureCounter();

@@ -4,7 +4,7 @@
 @import 'animate.css';
 
 body {
-  font-family: Raleway-Regular, sans-serif;
+  font-family: $regular;
 
   h1 {
     font-size: 2.2rem;
@@ -48,7 +48,7 @@ body {
     z-index: 99;
 
     .navbar-brand {
-      font-family: Raleway-Bold, sans-serif;
+      font-family: $bold;
       text-transform: uppercase;
     }
 
@@ -70,7 +70,7 @@ body {
             width: fit-content;
             padding: 5px;
             cursor: pointer;
-            font-family: Raleway-Bold;
+            font-family: $bold;
             margin: 0 10px;
             text-transform: capitalize;
 
@@ -142,7 +142,7 @@ body {
     background-attachment: fixed;
     height: fit-content;
     min-height: 100vh;
-    font-family: Raleway-Bold, sans-serif;
+    font-family: $bold;
     margin: auto;
     text-transform: uppercase;
     text-align: center;
@@ -227,7 +227,7 @@ body {
         }
 
         .about-text {
-          font-family: Raleway-Regular, sans-serif;
+          font-family: $regular;
         }
       }
     }
@@ -244,16 +244,18 @@ body {
     }
 
     .row {
-      height: 336px;
+      height: auto;
 
       .card {
-        background-color: transparent;
+        // background-color: $main-white;
         padding: 30px 20px;
         box-shadow: 10px 10px 34px 0 $shadow;
         -webkit-box-shadow: 10px 10px 34px 0 $shadow;
         -moz-box-shadow: 10px 10px 34px 0 $shadow;
         border-radius: 10px;
         min-height: 100%;
+        cursor: default;
+        z-index: 1;
 
         .card-header {
           background-color: transparent;
@@ -280,6 +282,33 @@ body {
     }
   }
 
+  #counters {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    .row {
+      .icon {
+        margin-bottom: 0;
+        font-size: 2.5rem;
+      }
+
+      span {
+        &.purecounter {
+          font-size: 2.5rem;
+          margin: auto 15px;
+          font-family: $bold;
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        font-family: $bold;
+        text-transform: capitalize;
+        margin-left: 3.5rem;
+      }
+    }
+  }
+
   // ---------------------------- Dark & Light mode -----------------------------------------
   &.light-mode {
     background-color: $main-white;
@@ -298,8 +327,9 @@ body {
 
     h1,
     h3,
-    .card-title {
-      font-family: Raleway-Bold, sans-serif;
+    .card-title,
+    .purecounter {
+      font-family: $bold;
       color: $title-color-light;
     }
 
@@ -345,6 +375,44 @@ body {
         }
       }
     }
+
+    #services {
+      .row {
+        .card {
+          background: $main-white;
+
+          &::before {
+            content: "";
+            position: absolute;
+            background: $main-white;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            top: 100%;
+            transition: all 0.3s;
+            z-index: -1;
+          }
+
+          &:hover {
+            &::before {
+              background: $menu-hover;
+              top: 0;
+              border-radius: 0;
+            }
+
+            .icon,
+            .card-title,
+            .card-text {
+              color: $main-white
+            }
+          }
+        }
+      }
+    }
+
+    #counters {
+      background-color: $background-light;
+    }
   }
 
   &.dark-mode {
@@ -363,7 +431,8 @@ body {
     .nav-link.active,
     .card-title,
     .card-text,
-    .icon {
+    .icon,
+    .purecounter {
       color: $main-white;
     }
 
@@ -407,6 +476,18 @@ body {
     #about-btn,
     .card {
       border-color: $main-white;
+    }
+
+    #services {
+      .row {
+        .card {
+          background-color: $main-black;
+        }
+      }
+    }
+
+    #counters {
+      background-color: $background-dark;
     }
   }
 }
