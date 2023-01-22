@@ -6,6 +6,19 @@
 body {
   font-family: Raleway-Regular, sans-serif;
 
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
   #back-to-top {
     display: none;
     position: fixed;
@@ -32,6 +45,7 @@ body {
     top: 0;
     right: 0;
     left: 0;
+    z-index: 99;
 
     .navbar-brand {
       font-family: Raleway-Bold, sans-serif;
@@ -175,26 +189,13 @@ body {
   }
 
   #about-us {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: Raleway-Bold, sans-serif;
 
     .row {
-      h1 {
-        font-size: 2.5rem;
-      }
-
-      h3 {
-        font-size: 1.5rem;
-      }
-
-      .icon {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-      }
 
       .col-lg-5,
       .col-lg-7 {
@@ -232,13 +233,59 @@ body {
     }
   }
 
+  #services {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    h1,
+    .text {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .row {
+      height: 336px;
+
+      .card {
+        background-color: transparent;
+        padding: 30px 20px;
+        box-shadow: 10px 10px 34px 0px $shadow;
+        -webkit-box-shadow: 10px 10px 34px 0px $shadow;
+        -moz-box-shadow: 10px 10px 34px 0px $shadow;
+        padding: 30px 20px;
+        border-radius: 10px;
+        min-height: 100%;
+
+        .card-header {
+          background-color: transparent;
+          border: none;
+          padding-top: 0;
+          padding-bottom: 1rem;
+        }
+
+        .card-title {
+          font-size: 1.2rem;
+          text-transform: capitalize;
+          margin-bottom: 1rem;
+        }
+
+        .card-body {
+          padding-top: 0;
+          padding-bottom: 0;
+
+          .card-text {
+            text-align: start;
+          }
+        }
+      }
+    }
+  }
+
   // ---------------------------- Dark & Light mode -----------------------------------------
   &.light-mode {
     background-color: $main-white;
 
-    h1,
     h2,
-    h3,
     h4,
     h5,
     h6,
@@ -247,10 +294,18 @@ body {
     label,
     .nav-link,
     .nav-link.active {
-      color: $main-white;
+      color: $main-black;
     }
 
-    .about-text {
+    h1,
+    h3,
+    .card-title {
+      font-family: Raleway-Bold, sans-serif;
+      color: $title-color-light;
+    }
+
+    .text,
+    .card-text {
       color: $text-grey;
     }
 
@@ -277,20 +332,14 @@ body {
       }
     }
 
+    .icon {
+      color: $nav-bg-light;
+    }
+
     #about-us {
       background-image: url(/dist/img/aboutus-bg-light.jpg);
 
       .row {
-
-        h1,
-        h3 {
-          color: $title-color-light;
-        }
-
-        .icon {
-          color: $nav-bg-light;
-        }
-
         #about-btn {
           background-color: $nav-bg-light;
           border-color: $nav-bg-light;
@@ -312,7 +361,10 @@ body {
     a,
     label,
     .nav-link,
-    .nav-link.active {
+    .nav-link.active,
+    .card-title,
+    .card-text,
+    .icon {
       color: $main-white;
     }
 
@@ -335,7 +387,7 @@ body {
     }
 
     .navbar-toggler {
-      background-color: #fff;
+      background-color: $main-white;
     }
 
     .navbar-nav {
@@ -351,19 +403,11 @@ body {
     #about-us {
       background-image: url(/dist/img/aboutus-bg-dark.jpg);
       background-position: bottom;
+    }
 
-      .row {
-
-        h1,
-        h3,
-        .icon {
-          color: $main-white;
-        }
-
-        #about-btn {
-          border-color: $main-white;
-        }
-      }
+    #about-btn,
+    .card {
+      border-color: $main-white;
     }
   }
 }
