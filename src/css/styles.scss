@@ -249,9 +249,9 @@ body {
       .card {
         background-color: transparent;
         padding: 30px 20px;
-        box-shadow: 10px 10px 34px 0px $shadow;
-        -webkit-box-shadow: 10px 10px 34px 0px $shadow;
-        -moz-box-shadow: 10px 10px 34px 0px $shadow;
+        box-shadow: 10px 10px 34px 0 $shadow;
+        -webkit-box-shadow: 10px 10px 34px 0 $shadow;
+        -moz-box-shadow: 10px 10px 34px 0 $shadow;
         border-radius: 10px;
         min-height: 100%;
 
