@@ -11,3 +11,5 @@
  - Animate.css
  - Wow.js
  - purecounterjs
+ - Isotope Layout
+ - GlightBox

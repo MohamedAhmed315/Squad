@@ -2,16 +2,20 @@
 @import './fonts';
 @import "/node_modules/bootstrap/scss/bootstrap";
 @import 'animate.css';
+@import '/node_modules/glightbox/dist/css/glightbox.min.css';
 
 body {
   font-family: $regular;
 
   h1 {
     font-size: 2.2rem;
+    font-family: $bold;
+    text-transform: capitalize;
   }
 
   h3 {
     font-size: 1.5rem;
+    text-transform: capitalize;
   }
 
   .icon {
@@ -304,7 +308,110 @@ body {
         font-size: 1rem;
         font-family: $bold;
         text-transform: capitalize;
-        margin-left: 3.5rem;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  #action {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    h1 {
+      text-align: center;
+      color: $main-white;
+      font-family: $bold;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1rem;
+      font-family: $regular;
+      color: $main-white;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      margin: auto;
+      display: block;
+      color: #fff;
+      border: solid 2px #fff;
+      width: fit-content;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      border-radius: 2rem;
+      text-transform: uppercase;
+      background-color: transparent;
+    }
+  }
+
+  #portfolio {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ---- button ---- */
+    .filter-button-group {
+      border-radius: 2rem;
+      width: fit-content;
+      margin: 2rem auto;
+
+      .filter-button {
+        &.is-checked {
+          color: $menu-hover;
+        }
+      }
+    }
+
+    .grid {
+      .element-item {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: 2s;
+
+        &>* {
+          margin: 0;
+          padding: 0;
+        }
+
+        .glightbox {
+          img {
+            position: relative;
+            width: auto;
+            height: 100%;
+          }
+
+          .icon {
+            position: absolute;
+            left: 45%;
+            top: 45%;
+            font-size: 3rem;
+            display: none;
+            color: $main-white;
+          }
+
+          &:hover {
+            .icon {
+              display: block;
+            }
+
+            img {
+              filter: grayscale(100%);
+            }
+          }
+        }
       }
     }
   }
@@ -329,7 +436,6 @@ body {
     h3,
     .card-title,
     .purecounter {
-      font-family: $bold;
       color: $title-color-light;
     }
 
@@ -413,6 +519,10 @@ body {
     #counters {
       background-color: $background-light;
     }
+
+    #action {
+      background: linear-gradient(rgba(63, 109, 159, 0.8), rgba(63, 109, 159, 0.8)), url(/src/img/cta-bg-light.jpg) fixed center center;
+    }
   }
 
   &.dark-mode {
@@ -488,6 +598,10 @@ body {
 
     #counters {
       background-color: $background-dark;
+    }
+
+    #action {
+      background: linear-gradient(rgba(3, 33, 84, 0.8), rgba(3, 33, 84, 0.8)), url(/src/img/cta-bg-light.jpg) fixed center center;
     }
   }
 }

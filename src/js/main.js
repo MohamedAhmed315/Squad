@@ -1,6 +1,5 @@
 import '../css/styles.scss';
-import PureCounter from "@srexi/purecounterjs";
-
+import Isotope from 'isotope-layout';
 
 // Dark Mode
 let dark_mode = document.querySelector('#dark-mode-switch');
@@ -60,5 +59,27 @@ back_to_top.addEventListener('click', function () {
     document.documentElement.scrollTop = 0;
 });
 
-// Counters
-const pure = new PureCounter();
+// Isotope Layout
+var iso = new Isotope('.grid', {
+    itemSelector: '.element-item',
+    layoutMode: 'fitRows'
+});
+
+var filtersElem = document.querySelector('.filters-button-group');
+filtersElem.addEventListener('click', function (event) {
+    var filterValue = event.target.getAttribute('data-filter');
+    iso.arrange({ filter: filterValue });
+});
+
+var buttonGroups = document.querySelectorAll('.filter-button-group');
+for (var i = 0, len = buttonGroups.length; i < len; i++) {
+    var buttonGroup = buttonGroups[i];
+    radioButtonGroup(buttonGroup);
+}
+
+function radioButtonGroup(buttonGroup) {
+    buttonGroup.addEventListener('click', function (event) {
+        buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
+        event.target.classList.add('is-checked');
+    });
+}
