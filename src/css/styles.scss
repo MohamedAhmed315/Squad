@@ -11,6 +11,8 @@ body {
     font-size: 2.2rem;
     font-family: $bold;
     text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 1.5rem;
   }
 
   h3 {
@@ -21,6 +23,10 @@ body {
   .icon {
     font-size: 2rem;
     margin-bottom: 0.5rem;
+  }
+
+  .section-text {
+    text-align: center;
   }
 
   #back-to-top {
@@ -154,7 +160,6 @@ body {
     h1 {
       &.main-title {
         font-size: 4rem;
-        color: $main-white;
       }
     }
 
@@ -241,12 +246,6 @@ body {
     padding-top: 5rem;
     padding-bottom: 5rem;
 
-    h1,
-    .text {
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
     .row {
       height: auto;
 
@@ -319,9 +318,7 @@ body {
     padding-bottom: 5rem;
 
     h1 {
-      text-align: center;
       color: $main-white;
-      font-family: $bold;
     }
 
     p {
@@ -350,21 +347,23 @@ body {
     padding-top: 5rem;
     padding-bottom: 5rem;
 
-    h1 {
+    p {
       text-align: center;
-      margin-bottom: 1.5rem;
     }
 
-    /* ---- button ---- */
     .filter-button-group {
       border-radius: 2rem;
+      border: solid 1px transparent;
+      overflow: hidden;
       width: fit-content;
       margin: 2rem auto;
+      text-align: center;
 
       .filter-button {
-        &.is-checked {
-          color: $menu-hover;
-        }
+        border: none;
+        padding: 10px;
+        text-transform: capitalize;
+        background-color: $shadow;
       }
     }
 
@@ -379,7 +378,6 @@ body {
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        transition: 2s;
 
         &>* {
           margin: 0;
@@ -416,6 +414,11 @@ body {
     }
   }
 
+  #testimonials {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
   // ---------------------------- Dark & Light mode -----------------------------------------
   &.light-mode {
     background-color: $main-white;
@@ -428,7 +431,9 @@ body {
     a,
     label,
     .nav-link,
-    .nav-link.active {
+    .nav-link.active,
+    .navbar-brand,
+    .nav-link {
       color: $main-white;
     }
 
@@ -440,8 +445,13 @@ body {
     }
 
     .text,
-    .card-text {
+    .card-text,
+    .section-text {
       color: $text-grey;
+    }
+
+    .dropdown-item {
+      color: $main-black;
     }
 
     .hero {
@@ -460,11 +470,6 @@ body {
 
     .nav-bg {
       background-color: $nav-bg-light;
-
-      .navbar-brand,
-      .nav-link {
-        color: $main-white;
-      }
     }
 
     .icon {
@@ -516,12 +521,19 @@ body {
       }
     }
 
-    #counters {
+    #counters,
+    #testimonials {
       background-color: $background-light;
     }
 
     #action {
       background: linear-gradient(rgba(63, 109, 159, 0.8), rgba(63, 109, 159, 0.8)), url(/src/img/cta-bg-light.jpg) fixed center center;
+    }
+
+    .filter-button {
+      &.is-checked {
+        color: $menu-hover;
+      }
     }
   }
 
@@ -542,7 +554,8 @@ body {
     .card-title,
     .card-text,
     .icon,
-    .purecounter {
+    .purecounter,
+    .filter-button.is-checked {
       color: $main-white;
     }
 
@@ -596,7 +609,8 @@ body {
       }
     }
 
-    #counters {
+    #counters,
+    #testimonials {
       background-color: $background-dark;
     }
 
