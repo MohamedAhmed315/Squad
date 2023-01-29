@@ -3,6 +3,7 @@
 @import "/node_modules/bootstrap/scss/bootstrap";
 @import 'animate.css';
 @import '/node_modules/glightbox/dist/css/glightbox.min.css';
+@import '/node_modules/@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
 
 body {
   font-family: $regular;
@@ -433,7 +434,8 @@ body {
     .nav-link,
     .nav-link.active,
     .navbar-brand,
-    .nav-link {
+    .nav-link,
+    .main-title {
       color: $main-white;
     }
 
@@ -442,6 +444,12 @@ body {
     .card-title,
     .purecounter {
       color: $title-color-light;
+    }
+
+    #counters {
+      p {
+        color: $main-black;
+      }
     }
 
     .text,

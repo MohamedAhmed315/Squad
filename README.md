@@ -13,3 +13,4 @@
  - purecounterjs
  - Isotope Layout
  - GlightBox
+ - Splide

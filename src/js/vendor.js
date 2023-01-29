@@ -18,3 +18,14 @@ const pure = new PureCounter();
 // GLightBox
 import GLightbox from 'glightbox';
 const lightbox = GLightbox();
+
+import '@splidejs/splide/css';
+import Splide from '@splidejs/splide';
+new Splide('.splide', {
+    type: 'loop',
+    focus: 'center',
+    rewind: true,
+    arrows: false,
+    perPage: 3,
+    perMove: 1,
+}).mount();
