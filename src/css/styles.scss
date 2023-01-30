@@ -418,6 +418,53 @@ body {
   #testimonials {
     padding-top: 5rem;
     padding-bottom: 5rem;
+
+    .section-text {
+      margin-bottom: 2rem;
+    }
+
+    .item {
+      max-width: 350px;
+      margin: auto;
+      padding: 15px;
+      box-shadow: 3px 10px 15px $shadow;
+
+      .testimonials-text {
+        text-align: center;
+        position: relative;
+
+        &::after {
+          content: "";
+          width: 0;
+          height: 0;
+          border-top: 20px solid;
+          border-right: 20px solid transparent;
+          border-left: 20px solid transparent;
+          position: absolute;
+          bottom: -50px;
+          left: calc(50% - 20px);
+        }
+      }
+    }
+
+    .img-container {
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      border-radius: 50%;
+      margin: 40px auto;
+
+      img {
+        margin: auto;
+        display: block;
+        width: auto;
+        height: 100%;
+      }
+    }
+
+    .splide__pagination {
+      top: 20rem;
+    }
   }
 
   // ---------------------------- Dark & Light mode -----------------------------------------
@@ -532,6 +579,18 @@ body {
     #counters,
     #testimonials {
       background-color: $background-light;
+
+      .testimonials-text {
+        color: $main-black;
+
+        &::after {
+          border-top-color: $main-white;
+        }
+      }
+
+      .item {
+        background-color: $main-white;
+      }
     }
 
     #action {
@@ -620,6 +679,18 @@ body {
     #counters,
     #testimonials {
       background-color: $background-dark;
+
+      .testimonials-text {
+        color: $main-white;
+
+        &::after {
+          border-top-color: $main-black;
+        }
+      }
+
+      .item {
+        background-color: $main-black;
+      }
     }
 
     #action {

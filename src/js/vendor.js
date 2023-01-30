@@ -23,9 +23,12 @@ import '@splidejs/splide/css';
 import Splide from '@splidejs/splide';
 new Splide('.splide', {
     type: 'loop',
-    focus: 'center',
+    lazyLoad: 'sequential',
     rewind: true,
+    rewindByDrag: true,
     arrows: false,
     perPage: 3,
     perMove: 1,
+    focus: 1,
+    rewindSpeed: 1000,
 }).mount();
