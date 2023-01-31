@@ -31,4 +31,12 @@ new Splide('.splide', {
     perMove: 1,
     focus: 1,
     rewindSpeed: 1000,
+    breakpoints: {
+        1199: {
+            perPage: 2,
+        },
+        991: {
+            perPage: 1,
+        },
+    }
 }).mount();
