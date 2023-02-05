@@ -20,6 +20,7 @@
     "glightbox": "^3.2.0",
     "isotope-layout": "^3.0.6",
     "jquery": "^3.6.3",
+    "jquery-validation": "^1.19.5",
     "popper.js": "^1.16.1",
     "wowjs": "^1.1.3"
   },

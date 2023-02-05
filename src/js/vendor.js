@@ -1,15 +1,7 @@
-// Bootstrap
-// import 'bootstrap';
-
 // Fontawesome
 import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';
-
-// Animate.css
-// import 'animate.css';
-
-// Wow.js
-// import 'wowjs'
+import '@fortawesome/fontawesome-free/js/brands';
 
 // Counters
 import PureCounter from "@srexi/purecounterjs";
@@ -19,6 +11,7 @@ const pure = new PureCounter();
 import GLightbox from 'glightbox';
 const lightbox = GLightbox();
 
+// Splide
 import '@splidejs/splide/css';
 import Splide from '@splidejs/splide';
 new Splide('.splide', {
@@ -40,3 +33,6 @@ new Splide('.splide', {
         },
     }
 }).mount();
+
+import 'jquery-validation';
+$("#contact-form").validate();
