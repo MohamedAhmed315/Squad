@@ -525,9 +525,13 @@ body {
         .team-social {
           text-align: center;
 
-          .icon {
-            margin: auto 2px;
-            font-size: 1.3rem;
+          a {
+            text-decoration: none;
+
+            .icon {
+              margin: auto 2px;
+              font-size: 1.3rem;
+            }
           }
         }
       }
