@@ -14,3 +14,5 @@
  - Isotope Layout
  - GlightBox
  - Splide
+ - Jquery Validation
+ - SweetAlert2

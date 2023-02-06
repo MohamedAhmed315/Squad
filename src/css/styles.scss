@@ -7,6 +7,12 @@
 
 body {
   font-family: $regular;
+  position: relative;
+
+  * {
+    font-family: $regular;
+
+  }
 
   h1 {
     font-size: 2.2rem;
@@ -42,6 +48,11 @@ body {
       outline: 0 !important;
       box-shadow: none !important;
     }
+  }
+
+  .swal2-title {
+    color: $main-black !important;
+    font-family: $bold;
   }
 
   #back-to-top {
@@ -534,10 +545,10 @@ body {
         }
       }
 
-      .map,
-      .form {
+      .map {
         overflow: hidden;
-        height: 500px;
+        height: 545px;
+        margin-bottom: 1rem;
 
         iframe {
           width: 100%;
@@ -546,7 +557,7 @@ body {
       }
 
       .form {
-        height: 500px;
+        height: 545px;
         padding: 2rem;
 
         textarea,
@@ -559,9 +570,105 @@ body {
         }
 
         #form-submit {
+          color: $main-white;
+          border-radius: 0;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+
+  #footer {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    color: $main-white;
+
+    .row {
+      .info-card {
+        padding: 2rem 1rem;
+        text-align: center;
+
+        h3 {
+          font-family: $bold;
+          text-transform: uppercase;
+        }
+
+        span {
+          font-family: $bold;
+        }
+      }
+
+      h5 {
+        text-transform: capitalize;
+      }
+
+      ul {
+        li {
+          width: fit-content;
+          margin-bottom: 0.5rem;
+
+          a {
+            text-transform: capitalize;
+            text-decoration: none;
+
+            &:hover {
+              color: $menu-hover;
+            }
+          }
+
+          &:hover {
+            color: $menu-hover;
+          }
+
+          &::marker {
+            content: '» ';
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      #newsletter-form {
+        input {
+          border: solid 1px $main-white;
+          border-radius: 0;
+        }
+
+        button {
+          border: solid 1px $main-white;
+          color: $main-white;
           background-color: transparent;
           border-radius: 0;
         }
+      }
+    }
+  }
+
+  #copyright {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #000;
+    text-align: center;
+
+    p {
+      color: $main-white;
+    }
+
+    span {
+      color: gold !important;
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin-top: 1rem;
+      padding: 0;
+
+      .icon {
+        color: $main-white;
+        font-size: 1.5rem;
+        margin: auto 1rem;
       }
     }
   }
@@ -694,7 +801,7 @@ body {
         background-color: $main-white;
 
         #form-submit {
-          border-color: $main-black;
+          background-color: $nav-bg-light;
         }
       }
     }
@@ -706,6 +813,18 @@ body {
     .filter-button {
       &.is-checked {
         color: $menu-hover;
+      }
+    }
+
+    #footer {
+      background-color: $background-dark;
+
+      .info-card {
+        background-color: $background-light;
+
+        span {
+          color: $nav-bg-dark;
+        }
       }
     }
   }
@@ -812,14 +931,25 @@ body {
         }
 
         #form-submit {
-          color: $main-white;
-          border-color: $main-white;
+          background-color: $nav-bg-dark;
         }
       }
     }
 
     #action {
       background: linear-gradient(rgba(3, 33, 84, 0.8), rgba(3, 33, 84, 0.8)), url(/src/img/cta-bg-light.jpg) fixed center center;
+    }
+
+    #footer {
+      background-color: $main-black;
+
+      .info-card {
+        background-color: $background-dark;
+
+        span {
+          color: $nav-bg-light;
+        }
+      }
     }
   }
 }

@@ -1,3 +1,6 @@
+// Bootstrap
+import "bootstrap";
+
 // Fontawesome
 import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';
@@ -34,5 +37,44 @@ new Splide('.splide', {
     }
 }).mount();
 
+// SweetAlert2
+import Swal from 'sweetalert2'
+
+// Jquery Validation
 import 'jquery-validation';
-$("#contact-form").validate();
+$("#contact-form").validate({
+    rules: {
+        contact_name: {
+            required: true
+        },
+        contact_email: {
+            required: true,
+            email: true
+        },
+        contact_message: {
+            required: true
+        }
+    },
+    messages: {
+        contact_name: {
+            required: 'Please enter your name.'
+        },
+        contact_email: {
+            required: 'Please enter your email.',
+            email: 'Invalid email format.'
+        },
+        contact_message: {
+            required: 'Please enter your message.'
+        },
+    },
+    submitHandler: function (form) {
+        if ($("#contact-form").valid()) {
+            Swal.fire({
+                title: 'Done!',
+                text: 'Your message has been sent successfully. \n We will contact you as soon as possible.',
+                icon: 'success',
+                confirmButtonText: 'Ok'
+              })
+        }
+    }
+});

@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/dist/img/letter-s.png" type="image/x-icon">
 </head>
 
-<body class="light-mode">
+<body class="light-mode" data-bs-spy="scroll" data-bs-target="#header">
     <button id="back-to-top" title="Go to top">
         <i class="fas fa-angle-double-up"></i>
     </button>
@@ -414,7 +414,7 @@
                 consectetur adipisicing elit. Dolor ipsum dicta unde, aperiam minus dolorum fugit laboriosam non nemo
                 ducimus ad expedita doloremque facilis, blanditiis quam est quibusdam earum voluptatum!</p>
 
-            <div class="row">
+            <div class="row animate__animated animate__fadeInUp animate__slow wow">
                 <div class="col-xl-3 col-lg-6 col-md-6 d-flex justify-content-center">
                     <div class="card">
                         <div class="img-container">
@@ -531,7 +531,7 @@
                 consectetur adipisicing elit. Quos enim similique repellendus consectetur architecto nemo quidem quo
                 aliquid dolores. Explicabo.</p>
 
-            <div class="row">
+            <div class="row animate__animated animate__fadeInUp animate__slow wow">
                 <div class="col-md-12 col-lg-6 mb-3">
                     <div class="info">
                         <i class="fas fa-map-marker-alt icon"></i>
@@ -543,7 +543,7 @@
                     <div class="info">
                         <i class="fas fa-map-marker-alt icon"></i>
                         <h3>Email Us</h3>
-                        <p>info@email.com</p>
+                        <p>info@squad.com</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3">
@@ -555,7 +555,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row animate__animated animate__fadeInUp animate__slow wow">
                 <div class="col-lg-6">
                     <div class="map">
                         <iframe
@@ -567,18 +567,18 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="form">
-                        <form id="contact-form" novalidate="novalidate">
+                        <form id="contact-form" method="post" novalidate="novalidate">
                             <div class="row">
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                <div class="col-6">
+                                    <input type="text" name="contact_name" class="form-control" placeholder="Your Name"
+                                        required>
                                 </div>
-                                <div class="col">
-                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                <div class="col-6">
+                                    <input type="email" name="contact_email" class="form-control"
+                                        placeholder="Your Email" required>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <textarea name="message" id="message" cols="30" rows="10"
+                                <div class="col-12">
+                                    <textarea name="contact_message" id="message" cols="30" rows="10"
                                         placeholder="Your Message" required></textarea>
                                 </div>
                             </div>
@@ -591,6 +591,122 @@
             </div>
         </div>
 
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xl-3 mb-5">
+                    <div class="info-card">
+                        <h3>squad</h3>
+                        <p>6 Chome-10-1 Ginza, Chuo City, Tokyo 104-0061</p>
+                        <p><span>Phone: &nbsp;</span>+81 3-6891-3390</p>
+                        <p><span>Email: &nbsp;</span>info@squad.com</p>
+                    </div>
+                </div>
+                <div class="col-6 col-xl-3 mb-5">
+                    <h5>Useful links</h5>
+                    <ul>
+                        <li>
+                            <a href="/index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/index.html#about-us">
+                                About us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/index.html#services">
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Terms of service
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Privacy policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-xl-3 mb-5">
+                    <h5>Our Services</h5>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Web Design
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Web Development
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Product Management
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Marketing
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Graphic Design
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-xl-3 mb-5">
+                    <h5>Our newsletter</h5>
+                    <p>Subscribe to our newsletter to recieve our latest updates and news.</p>
+                    <form method="post" id="newsletter-form">
+                        <div class="row">
+                            <div class="col pe-0">
+                                <input type="email" name="newsletter" class="form-control" placeholder="Enter Email..."
+                                    required>
+                            </div>
+                            <div class="col p-0">
+                                <button class="btn" type="submit">subscribe</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="copyright">
+        <div class="container">
+            <p>Developed by: <span>Mohamed Saber</span></p>
+            <a href="mailto:mohamedahmed315@hotmail.com">mohamedahmed315@hotmail.com</a>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/Silent.Magician.Lv8/">
+                        <i class="fab fa-facebook icon"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/MohamedAhmed315">
+                        <i class="fab fa-github icon"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/mohamed-ahmed315/">
+                        <i class="fab fa-linkedin icon"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <script src="/dist/js/main.js"></script>
