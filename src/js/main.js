@@ -38,9 +38,9 @@ window.onscroll = function () {
 
 // Close Navbar on Click
 document.addEventListener("click", function (event) {
-    if (event.target.classList.contains("navbar-toggler-icon")) {
+    if (event.target.classList.contains("navbar-toggler-icon") && document.querySelector("#header").classList.contains('show')) {
         document.querySelector("#header").classList.toggle("show");
-    } else if (event.target.classList.contains("nav-link")) {
+    } else {
         document.querySelector("#header").classList.remove("show");
     }
 });
